@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        label {
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e60074;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sales Prediction</h1>
+        <form action="/submit" method="POST">
+            <label for="tv">TV Budget(Million):</label>
+            <input type="number" id="tv" name="tv" step="0.01" required>
+
+            <label for="radio">Radio Budget(Million):</label>
+            <input type="number" id="radio" name="radio" step="0.01" required>
+
+            <label for="newspaper">Newspaper Budget(Million):</label>
+            <input type="number" id="newspaper" name="newspaper" step="0.01" required>
+
+            <button type="submit">Predict Sales</button>
+        </form>
+    </div>
+</body>
+</html>
